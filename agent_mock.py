@@ -1,8 +1,8 @@
 """
 Mock stand-in for agent_gemini.explain_drift_event_gemini().
 
-Same function signature and same job -- turn a drift event dict into a
-plain-language explanation -- but instead of calling a real LLM, it uses a
+Same function signature and same job, turn a drift event dict into a
+plain-language explanation, but instead of calling a real LLM, it uses a
 few simple rules to fake a plausible-sounding response. This lets us test
 and demo the FULL pipeline (data -> detection -> explanation) today, and
 swap in the real Gemini call later with a one-line change.
@@ -32,7 +32,7 @@ def explain_drift_event_mock(drift_event: dict) -> str:
         f"most consistent with slow tool wear or sensor recalibration drift, "
         f"rather than a single equipment failure. Recommend scheduling an "
         f"inspection of this sensor and its associated tool before the drift "
-        f"progresses further.\n\n[MOCK RESPONSE — replace with real Gemini call]"
+        f"progresses further.\n\n[MOCK RESPONSE - replace with real Gemini call]"
     )
 
 
