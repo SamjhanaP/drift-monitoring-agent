@@ -3,7 +3,7 @@ Agent layer: takes a detected drift event (pure numbers from drift_detector.py)
 and asks an LLM to explain it in plain language with a root-cause hypothesis.
 
 This is the ONLY file that talks to an LLM. Everything upstream (data
-generation, PSI detection) is plain statistics with zero API calls -- keeping
+generation, PSI detection) is plain statistics with zero API calls, keeping
 the LLM boundary this narrow is a real production pattern: it's cheap, fast
 to test, and easy to swap providers (Gemini <-> Claude <-> anything) without
 touching the math.
